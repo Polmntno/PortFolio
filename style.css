@@ -1,0 +1,25 @@
+:root{
+    --primar-ycolor: #E8E6E1;
+    --secondary-color: #B8B5AE;
+    --tertiary-color: #77746F;
+    --background-color: #242424;
+    --spacing: 20px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--primar-ycolor);
+}
+
+
+body > header > nav > ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+    justify-content: flex-end;
+
+}
