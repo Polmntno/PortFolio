@@ -1,9 +1,10 @@
 :root{
     --primar-ycolor: #E8E6E1;
     --secondary-color: #B8B5AE;
-    --tertiary-color: #77746F;
-    --background-color: #242424;
+    --tertiary-color: #b6b6b3;
+    --background-color: /*#242424*/ #151515;
     --spacing: 20px;
+    --left_right_margin: 5px;
 }
 
 html{
@@ -13,13 +14,76 @@ html{
 body {
     background-color: var(--background-color);
     color: var(--primar-ycolor);
+    margin-left: var(left_right_margin);
+    margin-right: var(left_right_margin)
+
 }
 
+main {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
 
+body> header {
+    margin : 25px 5px 30px 5px;
+}
 body > header > nav > ul {
     display: flex;
     list-style: none;
     gap: 35px;
     justify-content: flex-end;
+    font-family: "SpaceGrotesk", monospace;
+    margin: 2px;
+}
+
+body > main > #home > h1 {
+    font-family: "Bebas Neue", monospace;
+    font-size: 95px;
+    margin: 0;
+}
+
+body > main > #home > h2 {
+    font-family: "Bebas Neue", static;
+    font-size: 20px;
+    margin: 0;
+    color: var(--secondary-color)
+}
+
+body > main > #home {
+    /*margin-left: 95px;*/
+    margin-bottom: 90px;
+}
+
+#about {
+    display: flex;
+    align-items: flex-start ;
+    gap: 15px;
+    margin-top: 90px;
+    padding: 20px;
+}
+
+#about::before {
+    content: "";
+    display: block;
+    background-color: var(--secondary-color);
+    height: 1px;
+    width: 50%;
+    flex-shrink: 0;
+
+}
+
+#about p {
+    margin: 0px;
+    font-family: Inter, sans-serif;
+    text-align: justify;
+    color: var(--tertiary-color);
+}
+
+main > #experience {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 80px;
+    gap: 20px;
 
 }
